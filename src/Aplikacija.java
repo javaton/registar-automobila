@@ -20,7 +20,7 @@ public class Aplikacija {
 		listaAutomobila.add(ford);
 		listaAutomobila.add(new Automobil("Fiat", "Stilo", 5, "bela", 90d));
 //		Unos i dodavanje vozila sa konzole!
-		System.out.println("Unesite zeljeno vozilo");
+		System.out.println("***Unesite zeljeno vozilo***");
 		Scanner input = new Scanner(System.in);
 		System.out.println("Unesite tip vozila");
 		String tip = input.next();
@@ -38,7 +38,7 @@ public class Aplikacija {
 		listaAutomobila.add(unetiAutomobil);
 		
 		//Koristimo for petlju kako bismo prikazali sve automobile iz liste
-		System.out.println("Vozila na lageru: / Lista vozila:");
+		System.out.println("***Vozila na lageru: / Lista vozila:***");
 		for (Automobil automobil : listaAutomobila) {
 			System.out.println(automobil.informacijeOAutomobilu());
 		}
