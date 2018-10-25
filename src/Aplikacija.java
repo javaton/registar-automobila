@@ -3,7 +3,9 @@ import java.util.List;
 import java.util.Scanner;
 
 import automobil.Automobil;
+import automobil.Citac;
 import automobil.Motor;
+import automobil.Tocak;
 
 public class Aplikacija {
 
@@ -24,23 +26,13 @@ public class Aplikacija {
 		
 		listaAutomobila.add(ford);
 		listaAutomobila.add(new Automobil("Fiat", "Stilo", 5, "bela", 90d, 2000, 130, "dizel")); // dodavanje motora preko konstruktora sa posebnim atributima 2000, 130, "dizel"
-//		Unos i dodavanje vozila sa konzole!
-		System.out.println("***Unesite zeljeno vozilo***");
-		Scanner input = new Scanner(System.in);
-		System.out.println("Unesite tip vozila");
-		String tip = input.next();
-		System.out.println("Unesite marku:");
-		String marka = input.next();
-		System.out.println("Unesite broj putnika");
-		Integer brPutnika = input.nextInt();
-		System.out.println("Unesite boju:");
-		String boja = input.next();
-		System.out.println("Unesite cenu: ");
-		Double cena  = input.nextDouble();
-		
-		Automobil unetiAutomobil = new Automobil(marka, tip, brPutnika, boja, cena);
+
+		//Kod za unos automobila je pomeren u klasu Citac!
+		Automobil unetiAutomobil = Citac.unesiAutomobil();
 		//Dodavanje motora automobila preko setera
 		unetiAutomobil.setMotorAutomobila(benzinac16);
+		Tocak unetiTocak = Citac.unesiTocak();
+		unetiAutomobil.setTocak(unetiTocak);
 		System.out.println("Uspesno ste dodali automobil " + unetiAutomobil.informacijeOAutomobilu());
 		listaAutomobila.add(unetiAutomobil);
 		
